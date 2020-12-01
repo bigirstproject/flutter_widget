@@ -10,15 +10,13 @@ import 'package:flutter_app01/boxdecoration/borderRadius_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/boxShadow_colorAndoffset_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/centerSlice_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/shape_Property_Widget.dart';
-import 'package:flutter_app01/recom_widget_page.dart';
 import 'package:flutter_app01/row_column/Row_Text_Widget.dart';
-import 'package:flutter_app01/stack_page.dart';
-import 'package:flutter_app01/webview/page_view_page.dart';
+import 'package:flutter_app01/tabpage/recom_widget_page.dart';
+import 'file:///C:/workplace/flutter_widget/lib/tabpage/stack_page.dart';
 import 'package:flutter_app01/webview/webView_test_page.dart';
-
 import 'clip_and_backdropfilter/backdrop_filter_page.dart';
 import 'clip_and_backdropfilter/clip_rect_page.dart';
-import 'next_page.dart';
+import 'tabpage/next_page.dart';
 
 void main() {
   runApp(MyApp());

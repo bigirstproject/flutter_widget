@@ -26,8 +26,6 @@ class _StackPageState extends State<StackPage> {
                 }));
               },
             ),
-
-
           ],
         ),
       ),
