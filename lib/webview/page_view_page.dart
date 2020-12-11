@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'WebViewExample.dart';
@@ -14,7 +13,7 @@ class _PageViewPageState extends State<PageViewPage> {
     return PageView.builder(
       itemCount: 5,
       itemBuilder: (context, index) {
-        return  WebViewExample(height:double.infinity);
+        return WebViewExample(height: double.infinity);
       },
     );
   }

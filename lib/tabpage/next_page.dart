@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app01/pageview/pageview_demo.dart';
 import 'package:flutter_app01/statelesspage/state_less_page.dart';
 import 'package:flutter_app01/webview/WebViewExample.dart' as custom;
 
@@ -19,6 +20,15 @@ class _NextPageState extends State<NextPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
+              child: Text("go to PageViewDemo"),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (BuildContext context) {
+                  return PageViewDemo();
+                }));
+              },
+            ),
+            RaisedButton(
               child: Text("go to TestStateLessPage"),
               onPressed: () {
                 Navigator.push(context,
@@ -32,8 +42,8 @@ class _NextPageState extends State<NextPage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (BuildContext context) {
-                      return custom.WebViewExample(height:double.infinity);
-                    }));
+                  return custom.WebViewExample(height: double.infinity);
+                }));
               },
             ),
           ],

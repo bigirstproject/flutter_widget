@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class CustomScrollViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return CustomScrollView(
       scrollDirection: Axis.vertical,
       slivers: <Widget>[
@@ -34,7 +33,8 @@ class CustomScrollViewPage extends StatelessWidget {
         SliverPadding(
           padding: EdgeInsets.all(20),
           sliver: SliverGrid(
-              delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
+              delegate:
+                  SliverChildBuilderDelegate((BuildContext context, int index) {
                 print("CustomScrollViewPage SliverPadding index = ${index}");
                 return Container(
                   color: index % 2 == 0 ? Colors.greenAccent : Colors.yellow,
@@ -44,14 +44,15 @@ class CustomScrollViewPage extends StatelessWidget {
               }, childCount: 20),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,
-                  crossAxisSpacing:20,
+                  crossAxisSpacing: 20,
                   mainAxisSpacing: 20,
                   childAspectRatio: 1)),
         ),
         SliverFixedExtentList(
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
-                  print("CustomScrollViewPage SliverFixedExtentList index = ${index}");
+              print(
+                  "CustomScrollViewPage SliverFixedExtentList index = ${index}");
               return Container(
                 height: 30,
                 color: index % 2 == 0 ? Colors.red : Colors.purpleAccent,

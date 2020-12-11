@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app01/GestureDetector/gesture_detector_tab.dart';
+import 'package:flutter_app01/PointerEvent/pointer_event_tab_page.dart';
 import 'package:flutter_app01/Transform/TransformPage.dart';
 import 'package:flutter_app01/boxdecoration/Border_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/ColorFilter_Property_Widget.dart';
-import 'package:flutter_app01/container/Transform_Property.dart';
-import 'package:flutter_app01/container/container_all_page.dart';
-import 'package:flutter_app01/container/container_one_page.dart';
-import 'package:flutter_app01/container/container_page.dart';
 import 'package:flutter_app01/boxdecoration/borderRadius_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/boxShadow_colorAndoffset_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/centerSlice_Property_Widget.dart';
 import 'package:flutter_app01/boxdecoration/shape_Property_Widget.dart';
+import 'package:flutter_app01/container/Transform_Property.dart';
+import 'package:flutter_app01/container/container_all_page.dart';
+import 'package:flutter_app01/container/container_one_page.dart';
+import 'package:flutter_app01/container/container_page.dart';
+import 'package:flutter_app01/futurebuilder/FutureBuildertabPage.dart';
+import 'package:flutter_app01/listview/scrollable_page.dart';
 import 'package:flutter_app01/row_column/Row_Text_Widget.dart';
-import 'package:flutter_app01/tabpage/recom_widget_page.dart';
 import 'package:flutter_app01/tabpage/stack_page.dart';
 import 'package:flutter_app01/webview/webView_test_page.dart';
+
 import 'clip_and_backdropfilter/backdrop_filter_page.dart';
 import 'clip_and_backdropfilter/clip_rect_page.dart';
 import 'tabpage/next_page.dart';
@@ -56,21 +60,48 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: <Widget>[
           RaisedButton(
+            child: Text("go to GesTrueDetectorTab"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return GesTrueDetectorTab();
+              }));
+            },
+          ),
+          RaisedButton(
+            child: Text("go to PointerEventTabPage"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return PointerEventTabPage();
+              }));
+            },
+          ),
+          RaisedButton(
+            child: Text("go to FutureBuildertabPage"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return FutureBuildertabPage();
+              }));
+            },
+          ),
+          RaisedButton(
+            child: Text("go to next_tab_page"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return NextPage();
+              }));
+            },
+          ),
+          RaisedButton(
             child: Text("go to webview"),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
-                    return WebViewTestPage();
-                  }));
-            },
-          ),
-          RaisedButton(
-            child: Text("go to nextpage"),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (BuildContext context) {
-                    return NextPage();
-                  }));
+                return WebViewTestPage();
+              }));
             },
           ),
           RaisedButton(
@@ -78,8 +109,8 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
-                    return TransFormPage();
-                  }));
+                return TransFormPage();
+              }));
             },
           ),
           RaisedButton(
@@ -92,11 +123,11 @@ class _MyHomePageState extends State<MyHomePage> {
             },
           ),
           RaisedButton(
-            child: Text("go to RecomWidgetPage"),
+            child: Text("go to ScrollablePage"),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (BuildContext context) {
-                return RecomWidgetPage();
+                return ScrollablePage();
               }));
             },
           ),

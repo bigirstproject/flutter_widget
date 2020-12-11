@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app01/webview/PlatformViewVerticalGestureRecognizer.dart';
 import 'package:flutter_app01/webview/custom_gesture_recognizer.dart';
@@ -18,23 +17,28 @@ class _TestStateLessPageState extends State<TestStateLessPage> {
   @override
   Widget build(BuildContext context) {
     print("build _TestStateLessPageState");
-    return Container(
-        child: Column(
-      children: [
-        SizedBox(
-          height: 100,
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("TestStateLessPage"),
         ),
-        RaisedButton(
-          child: Text("test"),
-          onPressed: () {
-            setState(() {
-              text = "testtest";
-            });
-          },
-        ),
-        TestLessPage(text),
-      ],
-    ));
+        body: Container(
+            alignment: AlignmentDirectional(-1, -1),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                RaisedButton(
+                  child: Text("test"),
+                  onPressed: () {
+                    setState(() {
+                      text = "testtest";
+                    });
+                  },
+                ),
+                TestLessPage(text),
+              ],
+            )));
   }
 }
 
@@ -82,9 +86,10 @@ class _TestFulPageState extends State<TestFulPage> {
 }
 
 class WebViewExample extends StatefulWidget {
-  final double  height;
+  final double height;
 
   WebViewExample({this.height});
+
   @override
   WebViewExampleState createState() => WebViewExampleState();
 }
@@ -100,15 +105,16 @@ class WebViewExampleState extends State<WebViewExample> {
   @override
   Widget build(BuildContext context) {
     var verticalGestures1 = Factory<CustomGestureRecognizer>(
-        () => CustomGestureRecognizer(maxScreenOffsetX:400));
+        () => CustomGestureRecognizer(maxScreenOffsetX: 400));
     var verticalGestures2 = Factory<PlatformViewVerticalGestureRecognizer>(
-            () => PlatformViewVerticalGestureRecognizer());
+        () => PlatformViewVerticalGestureRecognizer());
     var gestureSet = [verticalGestures1].toSet();
     print("build WebViewExampleState");
     return Container(
-      key:ObjectKey("1"),
+      // key: GlobalObjectKey("1"),
+      key: ObjectKey("1"),
       width: double.infinity,
-      height: widget.height??200,
+      height: widget.height ?? 200,
       child: WebView(
         initialUrl: 'https://pub.dev/packages/webview_flutter',
         gestureNavigationEnabled: true,
@@ -117,4 +123,3 @@ class WebViewExampleState extends State<WebViewExample> {
     );
   }
 }
-
