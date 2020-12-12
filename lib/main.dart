@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app01/EventBus/EventBusTab.dart';
 import 'package:flutter_app01/GestureDetector/gesture_detector_tab.dart';
 import 'package:flutter_app01/PointerEvent/pointer_event_tab_page.dart';
 import 'package:flutter_app01/Transform/TransformPage.dart';
@@ -59,6 +60,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
+          RaisedButton(
+            child: Text("go to EventBusTab"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return EventBusTab();
+                  }));
+            },
+          ),
           RaisedButton(
             child: Text("go to GesTrueDetectorTab"),
             onPressed: () {

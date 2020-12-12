@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app01/GestureDetector/BothDirectionTestRoute.dart';
+import 'package:flutter_app01/GestureDetector/GestureConflictTestRouteState.dart';
 import 'package:flutter_app01/GestureDetector/GestureRecognizerTestRouteState.dart';
 import 'package:flutter_app01/GestureDetector/drag_page.dart';
 import 'package:flutter_app01/GestureDetector/drag_vertical_page.dart';
@@ -49,6 +51,24 @@ class GesTrueDetectorTab extends StatelessWidget {
                       MaterialPageRoute(builder: (BuildContext context) {
                     return GestureRecognizerTestRouteState();
                   }));
+                },
+              ),
+              RaisedButton(
+                child: Text("go to BothDirectionTestRoute"),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return BothDirectionTestRoute();
+                      }));
+                },
+              ),
+              RaisedButton(
+                child: Text("go to GestureConflictTestRouteState"),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return GestureConflictTestRouteState();
+                      }));
                 },
               ),
             ]),

@@ -12,11 +12,32 @@ class _ListViewPageState extends State<ListViewPage> {
       appBar: AppBar(
         title: Text("ListViewPage"),
       ),
-      // body: listViewDefault(addData()),
-      // body: listViewListTile(addData()),
-      // body: listViewLayoutBuilder(addData()),
-      // body: listViewLayoutSeparated(addData()),
-      body: listViewLayoutCustom(addData()),
+      body: NotificationListener(
+        onNotification: (notification) {
+          switch (notification.runtimeType) {
+            case ScrollStartNotification:
+              print("ListViewPage 开始滚动");
+              break;
+            case ScrollUpdateNotification:
+              print("ListViewPage 正在滚动");
+              break;
+            case ScrollEndNotification:
+              print("ListViewPage 滚动停止");
+              break;
+            case OverscrollNotification:
+              print("ListViewPage 滚动到边界");
+              break;
+              return true;
+          }
+          return true;
+        },
+        child: listViewDefault(addData()),
+        // body: listViewListTile(addData()),
+        // body: listViewListTile(addData()),
+        // body: listViewLayoutBuilder(addData()),
+        // body: listViewLayoutSeparated(addData()),
+        // body: listViewLayoutCustom(addData()),
+      ),
     );
   }
 
@@ -186,10 +207,31 @@ class _ListViewPageState extends State<ListViewPage> {
 // 添加分割线
     var divideList =
         ListTile.divideTiles(context: context, tiles: _list).toList();
-    return ListView(
-      // 添加ListView控件
-      // children: _list, // 无分割线
-      children: divideList, // 添加分割线/
+    return NotificationListener(
+      onNotification: (notification) {
+        switch (notification.runtimeType) {
+          case ScrollStartNotification:
+            print("ListViewPage  listViewDefault开始滚动");
+            break;
+          case ScrollUpdateNotification:
+            print("ListViewPage  listViewDefault正在滚动");
+            break;
+          case ScrollEndNotification:
+            print("ListViewPage  listViewDefault滚动停止");
+            break;
+          case OverscrollNotification:
+            print("ListViewPage  listViewDefault滚动到边界");
+            break;
+            return false;
+        }
+        print("ListViewPage  ${notification.runtimeType}");
+        return false;
+      },
+      child: ListView(
+        // 添加ListView控件
+        // children: _list, // 无分割线
+        children: divideList, // 添加分割线/
+      ),
     );
   }
 
