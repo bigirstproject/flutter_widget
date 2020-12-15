@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app01/pageview/pageview_demo.dart';
+import 'package:flutter_app01/pageview_and_swiper/pageview_demo.dart';
+import 'package:flutter_app01/pageview_and_swiper/swiper_page.dart';
 import 'package:flutter_app01/statelesspage/state_less_page.dart';
 import 'package:flutter_app01/webview/WebViewExample.dart' as custom;
 
@@ -19,6 +20,15 @@ class _NextPageState extends State<NextPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RaisedButton(
+              child: Text("go to SwiperPage"),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (BuildContext context) {
+                  return SwiperPage();
+                }));
+              },
+            ),
             RaisedButton(
               child: Text("go to PageViewDemo"),
               onPressed: () {

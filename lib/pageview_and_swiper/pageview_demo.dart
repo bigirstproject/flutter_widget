@@ -29,7 +29,7 @@ class PageView1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
-      scrollDirection: Axis.vertical,
+      scrollDirection: Axis.horizontal,
       // reverse:true,
       // pageSnapping:false,
       onPageChanged: (int index) {
@@ -80,9 +80,9 @@ class PageView1 extends StatelessWidget {
 
 class PageView2 extends StatelessWidget {
   var urls = [
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=78cd1809af26a9be180ec461660895a3&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F19%2F12786%2F67278f953e503402_1024x768.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=6a66d6893babbe7e2413638b7995f3d2&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F27%2F18385%2F18ec8f3a7fe7006b_1366x768.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=1f21ecaf45239827f41b45721a512f47&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F43%2F30033%2Fc6cefe42f2d55ada_1280x1024.jpg"
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608042043077&di=4b8d148d3323fa8c6d553e48b8f3e5cf&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=1f21ecaf45239827f41b45721a512f47&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F43%2F30033%2Fc6cefe42f2d55ada_1280x1024.jpg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608042043076&di=13fdfd969ddfec3b65f4bea5f3d4145e&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F02%2F38%2F01300000237560123245382609951.jpg"
   ];
 
   @override
@@ -105,7 +105,7 @@ class PageView3 extends StatelessWidget {
         childrenDelegate:
             SliverChildBuilderDelegate((BuildContext context, int index) {
       return Container(
-        color: Colors.blue[100 * (index % 9)],
+        color: Colors.blue[100 * (index + 1 % 9)],
         child: Center(
           child: Text('这里是子 $index'),
         ),
@@ -121,12 +121,12 @@ class PageView4 extends StatefulWidget {
 
 class _PageView4State extends State<PageView4> {
   var urls = [
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=78cd1809af26a9be180ec461660895a3&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F19%2F12786%2F67278f953e503402_1024x768.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=6a66d6893babbe7e2413638b7995f3d2&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F27%2F18385%2F18ec8f3a7fe7006b_1366x768.jpg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608042043077&di=4b8d148d3323fa8c6d553e48b8f3e5cf&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg",
     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=1f21ecaf45239827f41b45721a512f47&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F43%2F30033%2Fc6cefe42f2d55ada_1280x1024.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=78cd1809af26a9be180ec461660895a3&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F19%2F12786%2F67278f953e503402_1024x768.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=6a66d6893babbe7e2413638b7995f3d2&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F27%2F18385%2F18ec8f3a7fe7006b_1366x768.jpg",
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=1f21ecaf45239827f41b45721a512f47&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F43%2F30033%2Fc6cefe42f2d55ada_1280x1024.jpg"
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608042043076&di=13fdfd969ddfec3b65f4bea5f3d4145e&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F02%2F38%2F01300000237560123245382609951.jpg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608042043077&di=4b8d148d3323fa8c6d553e48b8f3e5cf&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607169810607&di=1f21ecaf45239827f41b45721a512f47&imgtype=0&src=http%3A%2F%2Fdik.img.kttpdq.com%2Fpic%2F43%2F30033%2Fc6cefe42f2d55ada_1280x1024.jpg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608042043076&di=13fdfd969ddfec3b65f4bea5f3d4145e&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F02%2F38%2F01300000237560123245382609951.jpg"
   ];
 
   PageController controller = PageController();
