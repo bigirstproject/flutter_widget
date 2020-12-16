@@ -55,10 +55,10 @@ class _SwiperPageState extends State<SwiperPage> {
 
   Widget _buildbutton() {
     return PositionedDirectional(
-      start: 10,
-      top: 50,
+      start: 50,
+      top: 10,
       child: Container(
-        width: 100,
+        width: 150,
         height: 50,
         child: RaisedButton(
           child: Text("RaisedButton"),
