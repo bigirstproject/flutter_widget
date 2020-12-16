@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
 
 class TransFormPage extends StatelessWidget {
   @override
@@ -23,7 +24,7 @@ class TransFormPage extends StatelessWidget {
               decoration: BoxDecoration(color: Colors.blue),
               //默认原点为左上角，左移20像素，向上平移5像素
               child: Transform.translate(
-                offset: Offset(-30.0, 10.0),
+                offset: Offset(-20.0, 5.0),
                 child: Text("Hello world"),
               ),
             ),
@@ -53,7 +54,10 @@ class TransFormPage extends StatelessWidget {
                     child: Text("Hello world"),
                   ),
                 ),
-                Text("你好", style: TextStyle(color: Colors.green, fontSize: 18.0),)
+                Text(
+                  "你好",
+                  style: TextStyle(color: Colors.green, fontSize: 18.0),
+                )
               ],
             ),
           ],
