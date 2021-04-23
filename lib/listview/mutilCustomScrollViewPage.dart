@@ -20,14 +20,14 @@ class MutilCustomScrollViewPage extends StatelessWidget {
           backgroundColor: Colors.blue,
           flexibleSpace: FlexibleSpaceBar(
             background: Image.network(
-              "http://b-ssl.duitang.com/uploads/blog/201312/04/20131204184148_hhXUT.jpeg",
+              "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcar0.autoimg.cn%2Fupload%2Fspec%2F4945%2Fu_20120220072722314264.jpg&refer=http%3A%2F%2Fcar0.autoimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621764710&t=1cb6531d591028276682cf7447b43c64",
               fit: BoxFit.cover,
             ),
           ),
         ),
         SliverFixedExtentList(
             delegate:
-            SliverChildBuilderDelegate((BuildContext context, int index) {
+                SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
                 color: Colors.deepPurpleAccent,
                 alignment: Alignment.center,
@@ -39,7 +39,7 @@ class MutilCustomScrollViewPage extends StatelessWidget {
           padding: EdgeInsets.all(20),
           sliver: SliverGrid(
               delegate:
-              SliverChildBuilderDelegate((BuildContext context, int index) {
+                  SliverChildBuilderDelegate((BuildContext context, int index) {
                 return Container(
                   color: index % 2 == 0 ? Colors.greenAccent : Colors.yellow,
                   alignment: Alignment.center,
@@ -54,7 +54,7 @@ class MutilCustomScrollViewPage extends StatelessWidget {
         ),
         SliverFixedExtentList(
             delegate:
-            SliverChildBuilderDelegate((BuildContext context, int index) {
+                SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
                 height: 30,
                 color: index % 2 == 0 ? Colors.red : Colors.purpleAccent,
@@ -65,7 +65,7 @@ class MutilCustomScrollViewPage extends StatelessWidget {
             itemExtent: 50),
         SliverFixedExtentList(
             delegate:
-            SliverChildBuilderDelegate((BuildContext context, int index) {
+                SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
                 color: Colors.deepPurpleAccent,
                 alignment: Alignment.center,
@@ -75,10 +75,10 @@ class MutilCustomScrollViewPage extends StatelessWidget {
             itemExtent: 60),
         SliverFixedExtentList(
             delegate:
-            SliverChildBuilderDelegate((BuildContext context, int index) {
+                SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
                 child: Image.network(
-                  "http://b-ssl.duitang.com/uploads/item/201208/08/20120808125749_UxUu8.jpeg",
+                  'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1977046168,368269341&fm=26&gp=0.jpg',
                   height: 360,
                   fit: BoxFit.cover,
                 ),
@@ -89,5 +89,3 @@ class MutilCustomScrollViewPage extends StatelessWidget {
     );
   }
 }
-
-
